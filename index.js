@@ -1,0 +1,1 @@
+(()=> {const plt = (el, ar)=>{fetch(ar).then(res => res.ok ? res.text() : Promise.reject(res)).then(res => el.outerHTML = res)};window.addEventListener("DOMContentLoaded", e =>{document.querySelectorAll("[data-ar]").forEach(el =>plt(el, el.dataset.ar))})})();
